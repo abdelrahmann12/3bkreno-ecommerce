@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono , Playpen_Sans_Arabic } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar/Navbar";
+import Slider from "./components/Slider/Slider";
+import Category from "./components/Category/Category";
+import ProductCard from "./components/Products/ProductCard";
+import CategorysCarousel from "./components/Carousel/CategorysCarousel";
+import TextMove from "./components/TextMove/TextMove";
+import Footer from "./components/Footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,6 +18,10 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const PlayPen = Playpen_Sans_Arabic({
+  subsets:["arabic"]
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,8 +35,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Navbar></Navbar>
+      <Slider></Slider>
+      <TextMove></TextMove>
+      <CategorysCarousel></CategorysCarousel>
+      {/* <Category></Category> */}
+      <ProductCard></ProductCard>
+      <Footer></Footer>
+
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${PlayPen} antialiased`}
       >
         {children}
       </body>

@@ -1,0 +1,29 @@
+.ticker {
+  width: 100%;
+  overflow: hidden;
+  background: #111;
+  color: #fff;
+  padding: 10px 0;
+
+}
+
+.ticker__track {
+  width: 100%;
+  display: inline-flex;
+  gap: 50px;
+  white-space: nowrap;
+  animation: scroll 30s linear infinite;
+
+  span{
+    font-size: 22px;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

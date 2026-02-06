@@ -1,0 +1,84 @@
+
+.category{
+  .heading{
+    h3{
+      font-size: 22px;
+      margin: 20px 0px;
+    }
+  }
+}
+.cats {
+  
+  .cat{
+    position: relative;
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+
+      &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .details {
+      h4 {
+        z-index: 2;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        position: absolute;
+        color: white;
+      }
+    }
+  }
+  .cat-puzzle {
+    position: relative;
+    background-image: url("../../../public/puzzle.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .details {
+      h4 {
+        z-index: 2;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        position: absolute;
+        color: white;
+      }
+    }
+  }
+
+   .cat-boys {
+    background-image: url("../../../public/boysimg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .cat-girls {
+    background-image: url("../../../public/images.jfif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  }
+
+  .cat-ramadan {
+    background-image: url("../../../public/ramadan.jfif");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+}
